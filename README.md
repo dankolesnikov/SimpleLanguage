@@ -3,8 +3,8 @@
 
 ## Description
 
-A programming language interpreter developed in Programming Paradigma class with Professor Cay Horstmann at SJSU.
-Simple Language is similar to Scala subset but differs several ways:
+A programming language interpreter developed in a Programming Paradigms class with Professor Cay Horstmann at SJSU.
+Simple Language is similar to Scala subset but differs in several ways:
 
 * Only two types: integer and functions
 * Defs end with semicolons
@@ -14,14 +14,14 @@ Simple Language is similar to Scala subset but differs several ways:
 
 ## Grammar
 
-	block ::= (valdef | fundef)* expr<br />
-	expr ::= expr2 | "if" "(" expr ")" block "else" block <br />
-	expr2 ::= term (( "+" | "-" ) term)* <br />
-	term ::= factor (( "*" | "/" ) factor)* <br />
-	factor ::= wholeNumber | "(" expr ")" | ident | funcall | funliteral <br />
-	funcall ::= ident "(" (expr ("," expr)*)? ")" <br />
-	funliteral ::= "{" (ident ("," ident)*)? "=>" block "}" <br />
-	valdef ::= "val" ident "=" expr ";" <br />
+	block ::= (valdef | fundef)* expr
+	expr ::= expr2 | "if" "(" expr ")" block "else" block
+	expr2 ::= term (( "+" | "-" ) term)*
+	term ::= factor (( "*" | "/" ) factor)*
+	factor ::= wholeNumber | "(" expr ")" | ident | funcall | funliteral
+	funcall ::= ident "(" (expr ("," expr)*)? ")"
+	funliteral ::= "{" (ident ("," ident)*)? "=>" block "}"
+	valdef ::= "val" ident "=" expr ";"
 	fundef ::= "def" ident "=" funliteral ";" 
 
 ## Examples 
